@@ -7,30 +7,30 @@ libvirt, qemu, and KVM stack.
 
 To setup disks, run `bootstrap.sh` and set `NIXADDR`:
 
-    ```
-    NIXADDR=192.168.1.50 ./bootstrap.sh
-    ```
+```sh
+NIXADDR=192.168.1.50 ./bootstrap.sh
+```
 
-    > There is some kind of issue with swap...checkout
-    > https://nixos.wiki/wiki/Swap if you're having issues and need to set it
-    > explicitly.
+> There is some kind of issue with swap...checkout
+> https://nixos.wiki/wiki/Swap if you're having issues and need to set it
+> explicitly.
 
 To install the base NixOS, run:
 
-    ```
-    NIXADDR=192.168.1.50 ./nixinit.sh
-    ```
+```sh
+NIXADDR=192.168.1.50 ./nixinit.sh
+```
 
 Default login after boot (change this), is:
 
-    ```
-    un: root
-    pw: root
-    ```
+```
+un: root
+pw: root
+```
 
 ## Installing a VM directly on the hypervisor
 
-```
+```sh
 virt-install \
   --name u1 \
   --ram 10000 \

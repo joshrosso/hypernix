@@ -62,3 +62,24 @@ In order for change to take effect, you must fully power-cycle the vm:
 virsh destroy $DOMAIN_ID
 virsh start $DOMAIN_NAME
 ```
+
+## Prometheus Exporter
+
+The prometheus exporter can be built for the target hypervisor from this
+repository:
+
+```
+https://github.com/zhangjianweibj/prometheus-libvirt-exporter
+```
+
+It can be built using task
+
+```
+task build
+```
+
+Run it on the server using:
+
+```
+./prometheus-libvirt-exporter
+```

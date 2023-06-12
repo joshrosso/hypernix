@@ -1,8 +1,11 @@
 # vm-images
 
-The VM images can be produced using `nixos-builders`. An example command would
-be:
+VM images can be producing using `nix-build`. An example command would be:
 
 ```sh
-nixos-generate -f qcow -c configuration.nix
+nix-build ./nixos-generate.nix \
+  --argstr formatConfig formats/qcow.nix \
+  -I nixos-config=configuration.nix \
+  --no-out-link \
+  -A config.system.build.qcow
 ```

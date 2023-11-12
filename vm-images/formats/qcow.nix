@@ -25,7 +25,7 @@
 
   system.build.qcow = import "${toString modulesPath}/../lib/make-disk-image.nix" {
     inherit lib config pkgs;
-    diskSize = 81920;
+    diskSize = 20920;
     format = "qcow2";
     partitionTableType = "hybrid";
   };

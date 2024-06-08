@@ -1,0 +1,11 @@
+virt-install \
+  --name test-k8s-deleteme \
+  --ram 5000 \
+  --disk=/var/lib/libvirt/images/k8s-test-delete.qcow2 \
+  --vcpus 2 \
+  --os-variant generic \
+  --console pty,target_type=serial \
+  --graphics=vnc,password=foobar,port=5988,listen=0.0.0.0 \
+  --cdrom=${PATH_ISO} \
+  --boot uefi \
+  --import

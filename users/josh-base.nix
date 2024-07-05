@@ -96,6 +96,32 @@
     };
   };
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "h1" = {
+        user = "root";
+        identityFile = "~/.ssh/homelab";
+      };
+      "h2" = {
+        user = "root";
+        identityFile = "~/.ssh/homelab";
+      };
+      "fenix" = {
+        user = "josh";
+        identityFile = "~/.ssh/joshrosso.pem";
+      };
+      "github.com" = {
+        user = "joshrosso";
+        identityFile = "~/.ssh/joshrosso.pem";
+      };
+      "192.168.*" = {
+        user = "josh";
+        identityFile = "~/.ssh/joshrosso.pem";
+      };
+    };
+  };
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
